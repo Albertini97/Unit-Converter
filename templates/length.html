@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Longitud</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Conversor de Longitud</h1>
+    <form method="POST">
+        <label for="value">Valor:</label>
+        <input type="number" step="any" id="value" name="value" required>
+        
+        <label for="from_unit">De:</label>
+        <select id="from_unit" name="from_unit">
+            <option value="millimeter">Milímetro</option>
+            <option value="centimeter">Centímetro</option>
+            <option value="meter">Metro</option>
+            <option value="kilometer">Kilómetro</option>
+            <option value="inch">Pulgada</option>
+            <option value="foot">Pie</option>
+            <option value="yard">Yarda</option>
+            <option value="mile">Milla</option>
+        </select>
+
+        <label for="to_unit">A:</label>
+        <select id="to_unit" name="to_unit">
+            <option value="millimeter">Milímetro</option>
+            <option value="centimeter">Centímetro</option>
+            <option value="meter">Metro</option>
+            <option value="kilometer">Kilómetro</option>
+            <option value="inch">Pulgada</option>
+            <option value="foot">Pie</option>
+            <option value="yard">Yarda</option>
+            <option value="mile">Milla</option>
+        </select>
+
+        <button type="submit">Convertir</button>
+    </form>
+
+    {% if result is not none %}
+        <h2>Resultado: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
